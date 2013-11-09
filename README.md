@@ -27,4 +27,7 @@ Part 1 implements three types of vertex shader:
  
  ![Earth Global](resources/snapshot04.png)  
  
- To create cloud shadow effect,   
+ To create cloud shadow effect, the following steps are taken:  
+ * Transform light rays to the lit point's tangent space.
+ * Calcuate the offset of texture coordinates on the lit point based on the light rays and the height of cloud.
+ * If the cloud density at the location of offsetted texture coordinates is not zero, then the lit point should be shadowed by the cloud.
